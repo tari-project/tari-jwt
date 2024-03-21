@@ -1,5 +1,7 @@
 # Ristretto256 JSON Webtoken (JWT)
 
+[![Coverage Status](https://coveralls.io/repos/github/tari-project/tari-jwt/badge.svg?branch=main)](https://coveralls.io/github/tari-project/tari-jwt?branch=main)
+
 This is an implementation of a JWT using the Ristretto255 elliptic curve.
 
 It extends the traits from the [jwt-compact](https://crates.io/crates/jwt-compact) crate, which in turn 

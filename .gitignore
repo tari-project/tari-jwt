@@ -1,0 +1,6 @@
+/target
+
+# Because this is a library, ignore these files.
+Cargo.lock
+rust-toolchain.toml
+

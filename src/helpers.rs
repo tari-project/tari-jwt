@@ -1,3 +1,5 @@
+// Copyright 2024 The Tari Project
+// SPDX-License-Identifier: BSD-3-Clause
 use jwt_compact::AlgorithmSignature;
 use std::borrow::Cow;
 use std::num::NonZeroUsize;

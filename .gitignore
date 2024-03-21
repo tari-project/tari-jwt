@@ -4,3 +4,6 @@
 Cargo.lock
 rust-toolchain.toml
 
+# Source coverage
+cov_raw
+coverage_report

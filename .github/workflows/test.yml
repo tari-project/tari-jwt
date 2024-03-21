@@ -1,0 +1,29 @@
+on: [push, pull_request]
+
+name: Test
+
+jobs:
+  test:
+    name: cargo test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        rust:
+          - stable
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install components
+        uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: stable
+      - name: test/debug
+        run: cargo +stable test
+      - name: test/release
+        run: cargo +stable test --release
+      - name: test/debug features
+        run: cargo +stable test --all-features
+      - name: test/release features
+        run: cargo +stable test --release --all-features
+      - name: Build documentation
+        run: cargo doc --all-features --no-deps

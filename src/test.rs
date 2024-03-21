@@ -1,3 +1,6 @@
+// Copyright 2024 The Tari Project
+// SPDX-License-Identifier: BSD-3-Clause
+
 use crate::{Ristretto256, Ristretto256SigningKey, Ristretto256VerifyingKey};
 use assert_matches::assert_matches;
 use base64ct::{Base64UrlUnpadded, Encoding};

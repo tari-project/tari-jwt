@@ -1,0 +1,23 @@
+name: Formatting, lints, and code checks
+on: [push, pull_request]
+
+env:
+  rustver: stable
+
+jobs:
+  clippy_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install components
+        uses: dtolnay/rust-toolchain@master
+        with:
+          components: clippy, rustfmt
+          toolchain: ${{ env.rustver }}
+      - name: Check formatting
+        run: cargo fmt --all -- --check
+      - name: Install linter
+        run: cargo install cargo-lints
+      - name: Run linter
+        run: cargo lints clippy --all-targets --all-features

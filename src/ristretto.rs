@@ -16,8 +16,12 @@ use tari_crypto::keys::{PublicKey, SecretKey};
 use tari_crypto::tari_utilities::ByteArray;
 
 // Wrap types to work around local types not being allowed in trait impls
+
+#[derive(Debug, Clone, Default)]
 pub struct Ristretto256;
+#[derive(Debug, Clone, Default)]
 pub struct Ristretto256SigningKey(pub RistrettoSecretKey);
+#[derive(Debug, Clone, Default)]
 pub struct Ristretto256VerifyingKey(pub RistrettoPublicKey);
 
 impl Algorithm for Ristretto256 {
